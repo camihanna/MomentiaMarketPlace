@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil PKL Fotografía | Marketplace Momentia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Montserrat', sans-serif !important; }
+        .brand-purple { color: #6B21A8; }
+        .bg-brand-purple { background-color: #6B21A8; }
+        
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans text-gray-800">
+
+    <nav class="bg-white shadow-sm fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center text-3xl fuente-momentia">
+                        <img src="Momentia (3).png" alt="Logo Momentia" class="h-24 w-auto mr-2"> 
+                    </a>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="text-gray-600 hover:text-purple-700 font-medium">Explorar Servicios</a>
+                    <a href="#" class="text-gray-600 hover:text-purple-700 font-medium">Sobre Nosotros</a>
+                    <a href="#" class="text-gray-600 hover:text-purple-700 font-medium">Blog</a>
+                    <a href="#" class="px-4 py-2 rounded-md bg-purple-700 text-white font-medium hover:bg-purple-800 shadow-sm transition">
+                        Iniciar Sesión
+                    </a>
+                </div>
+
+                <div class="flex items-center md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-purple-700 focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 shadow-lg absolute w-full left-0">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col">
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-purple-700 hover:bg-gray-50">Explorar Servicios</a>
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-purple-700 hover:bg-gray-50">Blog</a>
+                <a href="#" class="block w-full text-center mt-4 px-5 py-3 rounded-md font-medium text-white bg-purple-700 hover:bg-purple-800">
+                    Iniciar Sesión
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="pt-20 pb-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-8">
+            <div class="h-48 md:h-64 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');">
+                <div class="h-full w-full bg-black bg-opacity-20"></div>
+            </div>
+            
+            <div class="px-6 py-4 md:flex md:items-end md:justify-between relative">
+                <div class="flex flex-col md:flex-row items-center md:items-end -mt-12 md:-mt-16 mb-4 md:mb-0 text-center md:text-left w-full md:w-auto">
+                    <img class="h-24 w-24 md:h-32 md:w-32 rounded-full border-4 border-white shadow-md object-cover z-10 bg-gray-100" src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Logo PKL Fotografía">
+                    
+                    <div class="md:ml-4 mt-4 md:mt-0 md:mb-2 w-full">
+                        <h1 class="text-2xl md:text-3xl font-bold text-gray-900 flex flex-col md:flex-row items-center justify-center md:justify-start">
+                            PKL Fotografía
+                            <span class="mt-2 md:mt-0 md:ml-2 bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full flex items-center border border-blue-200" title="Documentación validada">
+                                <i class="fa-solid fa-certificate mr-1"></i> Verificado
+                            </span>
+                        </h1>
+                        <div class="flex flex-col md:flex-row items-center text-sm text-gray-500 mt-2 md:mt-1 justify-center md:justify-start">
+                            <span><i class="fa-solid fa-location-dot mr-1"></i> La Paz, Cochabamba & Santa Cruz</span>
+                            <span class="hidden md:inline mx-2">•</span>
+                            <span class="mt-1 md:mt-0"><i class="fa-solid fa-star text-yellow-400 mr-1"></i> 4.9 (56 Reseñas verificadas)</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex space-x-3 w-full md:w-auto justify-center mt-4 md:mt-0">
+                    <button class="flex-1 md:flex-none bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-50 font-medium transition flex items-center justify-center">
+                        <i class="fa-regular fa-heart mr-2"></i> Guardar
+                    </button>
+                    <button class="flex-1 md:flex-none bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-50 font-medium transition flex items-center justify-center">
+                        <i class="fa-solid fa-share-nodes mr-2"></i> Compartir
+                    </button>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-200 px-6">
+                <nav class="flex space-x-8 overflow-x-auto no-scrollbar whitespace-nowrap pb-1">
+                    <a href="#" class="border-b-2 border-purple-600 py-4 px-1 text-sm font-bold text-purple-600">Servicios y Precios</a>
+                    <a href="#" class="border-b-2 border-transparent py-4 px-1 text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">Portafolio (108)</a>
+                    <a href="#" class="border-b-2 border-transparent py-4 px-1 text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">Reseñas (56)</a>
+                    <a href="#" class="border-b-2 border-transparent py-4 px-1 text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">Equipamiento</a>
+                </nav>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            
+            <div class="lg:col-span-2 space-y-8 order-2 lg:order-1"> 
+                
+                <div class="bg-white rounded-xl shadow p-6">
+                    <h2 class="text-xl font-bold text-gray-900 mb-4">Sobre Nosotros</h2>
+                    <p class="text-gray-600 leading-relaxed text-justify md:text-left">
+                        En <strong>PKL Fotografía</strong> no solo tomamos fotos, capturamos emociones. Somos un equipo especializado en cobertura documental de eventos sociales y corporativos. Nos caracterizamos por un estilo cinematográfico, edición de color profesional y discreción absoluta durante tu evento. Contamos con equipos de última generación (Sony Alpha series) y drones para tomas aéreas espectaculares.
+                    </p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full"><i class="fa-solid fa-camera mr-1"></i> Fotografía</span>
+                        <span class="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full"><i class="fa-solid fa-video mr-1"></i> Video 4K</span>
+                        <span class="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full"><i class="fa-solid fa-plane-up mr-1"></i> Drone</span>
+                        <span class="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">Bodas</span>
+                        <span class="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">Graduaciones</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow p-6">
+                    <h2 class="text-xl font-bold text-gray-900 mb-6">Paquetes Populares</h2>
+                    
+                    <div class="border border-gray-200 rounded-lg p-4 mb-4 hover:border-purple-300 transition cursor-pointer">
+                        <div class="flex flex-col md:flex-row justify-between items-start">
+                            <div class="mb-4 md:mb-0">
+                                <h3 class="font-bold text-lg text-gray-800">Pack "Eternal" (Boda Completa)</h3>
+                                <p class="text-sm text-gray-500 mt-1">Cobertura integral desde los preparativos hasta la fiesta.</p>
+                                <ul class="mt-2 text-sm text-gray-600 list-disc list-inside">
+                                    <li>2 Fotógrafos + 1 Videógrafo (Drone incluido)</li>
+                                    <li>Entrega de 500+ fotos editadas en alta resolución</li>
+                                    <li>Video resumen cinematográfico (Highlights 3-5 min)</li>
+                                    <li>Fotobook impreso de lujo (30x30cm)</li>
+                                </ul>
+                            </div>
+                            <div class="text-left md:text-right w-full md:w-auto mt-2 md:mt-0 bg-gray-50 md:bg-transparent p-3 md:p-0 rounded">
+                                <p class="text-2xl font-bold text-purple-700">Bs 3,500</p>
+                                <p class="text-xs text-gray-500">por evento</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border border-gray-200 rounded-lg p-4 hover:border-purple-300 transition cursor-pointer">
+                        <div class="flex flex-col md:flex-row justify-between items-start">
+                            <div class="mb-4 md:mb-0">
+                                <h3 class="font-bold text-lg text-gray-800">Sesión Pre-Boda / Retratos</h3>
+                                <p class="text-sm text-gray-500 mt-1">Ideal para parejas, graduados o sesiones familiares en exterior.</p>
+                                <ul class="mt-2 text-sm text-gray-600 list-disc list-inside">
+                                    <li>2 horas de sesión en locación a elección</li>
+                                    <li>2 cambios de vestuario</li>
+                                    <li>30 fotos con edición fine-art</li>
+                                    <li>Galería online privada por 1 año</li>
+                                </ul>
+                            </div>
+                            <div class="text-left md:text-right w-full md:w-auto mt-2 md:mt-0 bg-gray-50 md:bg-transparent p-3 md:p-0 rounded">
+                                <p class="text-2xl font-bold text-purple-700">Bs 450</p>
+                                <p class="text-xs text-gray-500">por sesión</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow p-6">
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 class="text-xl font-bold text-gray-900">Portafolio Reciente</h2>
+                        <a href="#" class="text-purple-600 text-sm font-medium hover:underline">Ver todo</a>
+                    </div>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
+                        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" class="rounded-lg h-32 w-full object-cover hover:opacity-90 cursor-pointer" alt="Boda">
+                        <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" class="rounded-lg h-32 w-full object-cover hover:opacity-90 cursor-pointer" alt="Anillos">
+                        <img src="https://images.unsplash.com/photo-1606216794074-735e91aa2c92?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" class="rounded-lg h-32 w-full object-cover hover:opacity-90 cursor-pointer hidden md:block" alt="Fiesta"> 
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow p-6">
+                    <h2 class="text-xl font-bold text-gray-900 mb-4">Reseñas Verificadas</h2>
+                    <div class="border-b border-gray-100 pb-4 mb-4">
+                        <div class="flex items-center mb-2 justify-between md:justify-start">
+                            <div class="flex text-yellow-400 text-xs">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <span class="ml-2 font-bold text-sm text-gray-800">Andrea M.</span>
+                            <span class="ml-auto md:ml-4 text-xs text-green-600 font-bold bg-green-50 px-2 py-0.5 rounded"><i class="fa-solid fa-check"></i> Evento Realizado</span>
+                        </div>
+                        <p class="text-sm text-gray-600">"¡Increíbles fotos! Capturaron momentos que ni siquiera me di cuenta que pasaron. El equipo es súper amable y te hacen sentir muy cómoda frente a la cámara."</p>
+                    </div>
+                    <div>
+                        <div class="flex items-center mb-2 justify-between md:justify-start">
+                            <div class="flex text-yellow-400 text-xs">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <span class="ml-2 font-bold text-sm text-gray-800">Carlos R.</span>
+                            <span class="ml-auto md:ml-4 text-xs text-green-600 font-bold bg-green-50 px-2 py-0.5 rounded"><i class="fa-solid fa-check"></i> Evento Realizado</span>
+                        </div>
+                        <p class="text-sm text-gray-600">"El video quedó espectacular, parece una película. Tardaron un poco en la entrega final, pero valió totalmente la pena la espera."</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="lg:col-span-1 order-1 lg:order-2">
+                <div class="bg-white rounded-xl shadow-lg p-6 lg:sticky lg:top-24 border-t-4 border-purple-600">
+                    
+                    <div class="text-center mb-6">
+                        <p class="text-gray-500 text-sm">Rangos de Precios</p>
+                        <p class="text-3xl font-bold text-gray-900">Bs 450 - 4k</p>
+                        <p class="text-xs text-gray-400">dependiendo el paquete</p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Fecha del Evento</label>
+                            <input type="date" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-purple-500 outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Horas de Cobertura</label>
+                            <select class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-purple-500 outline-none bg-white">
+                                <option>Seleccionar...</option>
+                                <option>2 horas (Sesión)</option>
+                                <option>4-6 horas (Medio día)</option>
+                                <option>8-10 horas (Día completo)</option>
+                                <option>Video + Foto (Paquete Full)</option>
+                            </select>
+                        </div>
+                        <button class="w-full bg-purple-700 hover:bg-purple-800 text-white font-bold py-3 rounded-lg transition shadow-md">
+                            Consultar Disponibilidad
+                        </button>
+                        <p class="text-xs text-center text-gray-500 mt-2">Respuesta promedio: 2 horas.</p>
+                    </div>
+
+                    <div class="mt-8 bg-gray-50 rounded-lg p-4 border border-gray-200">
+                        <h4 class="text-sm font-bold text-gray-800 mb-2 flex items-center">
+                            <i class="fa-solid fa-shield-halved text-green-600 mr-2"></i> Garantía Momentia
+                        </h4>
+                        <ul class="text-xs text-gray-600 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check text-green-500 mr-2 mt-0.5"></i>
+                                <span><strong>Reserva Segura:</strong> Se congela el pago hasta la entrega del material.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check text-green-500 mr-2 mt-0.5"></i>
+                                <span><strong>Backup Digital:</strong> El proveedor debe mantener copia de tus archivos por 6 meses.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check text-green-500 mr-2 mt-0.5"></i>
+                                <span><strong>Identidad Verificada:</strong> C.I. y Portafolio validado.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-6 text-center">
+                        <a href="#" class="text-purple-600 text-sm font-medium hover:underline flex justify-center items-center">
+                            <i class="fa-regular fa-comment-dots mr-2"></i> Chatear con PKL
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+</html>
