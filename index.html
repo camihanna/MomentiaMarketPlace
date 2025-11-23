@@ -6,46 +6,41 @@
     <title>Marketplace Momentia | Tu evento seguro</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
     <style>
-        /* Personalización de colores basada en elegancia y confianza */
+        /* Aplicamos Montserrat a todo, igual que en como-funciona.html */
+        body { font-family: 'Montserrat', sans-serif !important; }
+        
         .brand-purple { color: #6B21A8; }
         .bg-brand-purple { background-color: #6B21A8; }
         .hero-bg {
             background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
             background-size: cover;
             background-position: center;
-        
-        @font-face {
-            font-family: 'FuenteMomentia'; /* Nombre de la fuente */
-            src: url('/fonts/KulachatSerifDemoSemibold-eZd76.woff2') format('woff2'); 
-            font-weight: normal;
-            font-style: normal;
-            font-display: swap;
         }
-
-        /* Define una clase simple de CSS puro */
-        .fuente-momentia {
-            font-family: 'FuenteMomentia', sans-serif !important; 
-            /* El !important asegura que anule la posible tipografía por defecto de Tailwind */
-        }
-        }
+        /* Eliminé la referencia a la fuente local que causaba conflicto */
     </style>
 </head>
-<body class="bg-gray-50 font-sans text-gray-800">
 
-    <nav class="bg-white shadow-md fixed w-full z-50">
+<body class="bg-gray-50 text-gray-800">
+
+    <nav class="bg-white shadow-sm fixed w-full z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
                     <a href="index.html" class="flex items-center text-3xl fuente-momentia">
-                        <img src="logo.png" alt="Logo Momentia" class="h-24 w-auto mr-2"> 
-                        Momentia
+                        <img src="Momentia (3).png" alt="Logo Momentia" class="h-40 w-auto mr-2"> 
                     </a>
                 </div>
+
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#" class="text-gray-600 hover:text-purple-700">Explorar Servicios</a>
-                    <a href="#" class="text-gray-600 hover:text-purple-700">Cómo Funciona</a>
-                    <a href="login.html" class="px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-purple-700 hover:bg-purple-800">
+                    <a href="busqueda.html" class="text-gray-600 hover:text-purple-700 font-medium">Explorar Servicios</a>
+                    <a href="nosotros.html" class="text-gray-600 hover:text-purple-700 font-medium">Sobre Nosotros</a>
+                    <a href="como-funciona.html" class="text-gray-600 hover:text-purple-700 font-medium">Cómo Funciona</a>
+                    <a href="blog.html" class="text-gray-600 hover:text-purple-700 font-medium">Blog</a>
+                    <a href="login.html" class="px-4 py-2 rounded-md bg-purple-700 text-white font-medium hover:bg-purple-800 shadow-sm transition">
                         Iniciar Sesión
                     </a>
                 </div>
@@ -235,13 +230,13 @@
     <footer class="bg-gray-900 text-white py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
-                <h3 class="text-xl font-bold mb-4">EventosLaPaz</h3>
+                <h3 class="text-xl font-bold mb-4">Momentia</h3>
                 <p class="text-gray-400 text-sm">El primer marketplace seguro y formal para organizar eventos en Bolivia.</p>
             </div>
             <div>
                 <h4 class="font-bold mb-4">Empresa</h4>
                 <ul class="text-gray-400 text-sm space-y-2">
-                    <li><a href="#" class="hover:text-white">Sobre Nosotros</a></li>
+                    <li><a href="nosotros.html" class="hover:text-white">Sobre Nosotros</a></li>
                     <li><a href="#" class="hover:text-white">Blog</a></li>
                     <li><a href="#" class="hover:text-white">Términos y Condiciones</a></li>
                 </ul>
