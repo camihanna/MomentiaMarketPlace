@@ -12,25 +12,6 @@
         body { font-family: 'Montserrat', sans-serif !important; }
         .brand-purple { color: #6B21A8; }
         .bg-brand-purple { background-color: #6B21A8; }
-        .step-connector { 
-            position: absolute; 
-            top: 2rem; 
-            left: 50%; 
-            transform: translateX(-50%); 
-            width: 2px; 
-            height: 100%; 
-            background-color: #E5E7EB; 
-            z-index: -1; 
-        }
-        @media (min-width: 768px) {
-            .step-connector {
-                top: 50%;
-                left: 0;
-                transform: translateY(-50%);
-                width: 100%;
-                height: 2px;
-            }
-        }
     </style>
 </head>
 
@@ -38,87 +19,107 @@
 
     <nav class="bg-white shadow-sm fixed w-full z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
+            <div class="flex justify-between h-16 items-center">
                 <div class="flex items-center">
                     <a href="index.html" class="flex items-center text-3xl fuente-momentia">
-                        <img src="Momentia (3).png" alt="Logo Momentia" class="h-40 w-auto mr-2"> 
+                        <img src="Momentia (3).png" alt="Logo Momentia" class="h-24 w-auto mr-2"> 
                     </a>
                 </div>
+
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="busqueda.html" class="text-gray-600 hover:text-purple-700 font-medium">Explorar</a>
+                    <a href="busqueda.html" class="text-gray-600 hover:text-purple-700 font-medium">Explorar Servicios</a>
                     <a href="nosotros.html" class="text-gray-600 hover:text-purple-700 font-medium">Sobre Nosotros</a>
                     <a href="como-funciona.html" class="text-purple-700 font-bold">Cómo Funciona</a>
                     <a href="blog.html" class="text-gray-600 hover:text-purple-700 font-medium">Blog</a>
-                    <a href="login.html" class="px-4 py-2 rounded-md bg-purple-700 text-white font-medium hover:bg-purple-800 shadow-sm transition">Iniciar Sesión</a>
+                    <a href="login.html" class="px-4 py-2 rounded-md bg-purple-700 text-white font-medium hover:bg-purple-800 shadow-sm transition">
+                        Iniciar Sesión
+                    </a>
                 </div>
+
+                <div class="flex items-center md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-purple-700 focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 shadow-lg absolute w-full left-0">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col">
+                <a href="busqueda.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-purple-700 hover:bg-gray-50">Explorar Servicios</a>
+                <a href="nosotros.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-purple-700 hover:bg-gray-50">Sobre Nosotros</a>
+                <a href="como-funciona.html" class="block px-3 py-2 rounded-md text-base font-bold text-purple-700 bg-purple-50">Cómo Funciona</a>
+                <a href="blog.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-purple-700 hover:bg-gray-50">Blog</a>
+                <a href="login.html" class="block w-full text-center mt-4 px-5 py-3 rounded-md font-medium text-white bg-purple-700 hover:bg-purple-800">
+                    Iniciar Sesión
+                </a>
             </div>
         </div>
     </nav>
 
     <div class="pt-24 pb-12 bg-white text-center px-4">
-        <h1 class="text-4xl font-extrabold text-gray-900 mb-4">¿Cómo funciona Momentia?</h1>
-        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-            Hemos simplificado la organización de eventos eliminando la informalidad. <br>
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">¿Cómo funciona Momentia?</h1>
+        <p class="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
+            Hemos simplificado la organización de eventos eliminando la informalidad. <br class="hidden sm:block">
             Elige qué quieres saber:
         </p>
 
         <div class="flex justify-center mt-8">
-            <div class="relative inline-grid grid-cols-2 p-1 bg-gray-100 rounded-full items-center">
+            <div class="relative inline-grid grid-cols-2 p-1 bg-gray-100 rounded-full items-center w-full max-w-xs sm:max-w-md">
                 
                 <div id="slider" class="absolute top-1 bottom-1 left-1 w-[calc(50%-0.25rem)] bg-white rounded-full shadow-sm transform transition-transform duration-300 ease-in-out z-0"></div>
 
-                <button onclick="showSection('cliente')" class="relative z-10 px-8 py-2 text-sm font-bold text-purple-800 text-center focus:outline-none transition-colors duration-300" id="btn-cliente">
+                <button onclick="showSection('cliente')" class="relative z-10 px-4 sm:px-8 py-2 text-sm font-bold text-purple-800 text-center focus:outline-none transition-colors duration-300 whitespace-nowrap" id="btn-cliente">
                     Soy Cliente
                 </button>
                 
-                <button onclick="showSection('proveedor')" class="relative z-10 px-8 py-2 text-sm font-bold text-gray-500 text-center focus:outline-none transition-colors duration-300" id="btn-proveedor">
+                <button onclick="showSection('proveedor')" class="relative z-10 px-4 sm:px-8 py-2 text-sm font-bold text-gray-500 text-center focus:outline-none transition-colors duration-300 whitespace-nowrap" id="btn-proveedor">
                     Soy Proveedor
                 </button>
             </div>
         </div>
     </div>     
-           
 
     <section id="section-cliente" class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative mt-8">
             <div class="hidden md:block absolute top-12 left-0 w-full h-1 bg-gray-200 z-0 transform -translate-y-1/2"></div>
 
-            <div class="relative z-10 text-center bg-gray-50 p-4">
-                <div class="w-24 h-24 mx-auto bg-purple-100 rounded-full flex items-center justify-center border-4 border-white shadow-sm mb-4">
-                    <i class="fa-solid fa-magnifying-glass text-3xl text-purple-600"></i>
+            <div class="relative z-10 text-center bg-gray-50 p-4 rounded-lg md:bg-transparent md:p-0">
+                <div class="w-20 h-20 sm:w-24 sm:h-24 mx-auto bg-purple-100 rounded-full flex items-center justify-center border-4 border-white shadow-sm mb-4">
+                    <i class="fa-solid fa-magnifying-glass text-2xl sm:text-3xl text-purple-600"></i>
                 </div>
                 <h3 class="text-lg font-bold mb-2">1. Busca y Compara</h3>
                 <p class="text-sm text-gray-600">Filtra por precio, tipo de evento y revisa portafolios reales con reseñas verificadas.</p>
             </div>
 
-            <div class="relative z-10 text-center bg-gray-50 p-4">
-                <div class="w-24 h-24 mx-auto bg-purple-100 rounded-full flex items-center justify-center border-4 border-white shadow-sm mb-4">
-                    <i class="fa-solid fa-file-contract text-3xl text-purple-600"></i>
+            <div class="relative z-10 text-center bg-gray-50 p-4 rounded-lg md:bg-transparent md:p-0">
+                <div class="w-20 h-20 sm:w-24 sm:h-24 mx-auto bg-purple-100 rounded-full flex items-center justify-center border-4 border-white shadow-sm mb-4">
+                    <i class="fa-solid fa-file-contract text-2xl sm:text-3xl text-purple-600"></i>
                 </div>
                 <h3 class="text-lg font-bold mb-2">2. Reserva Segura</h3>
                 <p class="text-sm text-gray-600">Al reservar, se genera un <strong>Contrato Digital Automático</strong> con las condiciones claras.</p>
             </div>
 
-            <div class="relative z-10 text-center bg-gray-50 p-4">
-                <div class="w-24 h-24 mx-auto bg-purple-100 rounded-full flex items-center justify-center border-4 border-white shadow-sm mb-4">
-                    <i class="fa-solid fa-lock text-3xl text-purple-600"></i>
+            <div class="relative z-10 text-center bg-gray-50 p-4 rounded-lg md:bg-transparent md:p-0">
+                <div class="w-20 h-20 sm:w-24 sm:h-24 mx-auto bg-purple-100 rounded-full flex items-center justify-center border-4 border-white shadow-sm mb-4">
+                    <i class="fa-solid fa-lock text-2xl sm:text-3xl text-purple-600"></i>
                 </div>
                 <h3 class="text-lg font-bold mb-2">3. Pago en Custodia</h3>
                 <p class="text-sm text-gray-600">Tu dinero no va directo al proveedor. La plataforma lo retiene hasta que se cumpla el servicio.</p>
             </div>
 
-            <div class="relative z-10 text-center bg-gray-50 p-4">
-                <div class="w-24 h-24 mx-auto bg-green-100 rounded-full flex items-center justify-center border-4 border-white shadow-sm mb-4">
-                    <i class="fa-regular fa-star text-3xl text-green-600"></i>
+            <div class="relative z-10 text-center bg-gray-50 p-4 rounded-lg md:bg-transparent md:p-0">
+                <div class="w-20 h-20 sm:w-24 sm:h-24 mx-auto bg-green-100 rounded-full flex items-center justify-center border-4 border-white shadow-sm mb-4">
+                    <i class="fa-regular fa-star text-2xl sm:text-3xl text-green-600"></i>
                 </div>
                 <h3 class="text-lg font-bold mb-2">4. Disfruta y Califica</h3>
                 <p class="text-sm text-gray-600">Tras el evento, confirmas la recepción y liberamos el pago. ¡No olvides dejar tu reseña!.</p>
             </div>
         </div>
 
-        <div class="text-center mt-16">
-            <a href="busqueda.html" class="inline-block bg-purple-700 text-white font-bold py-4 px-10 rounded-full hover:bg-purple-800 transition shadow-lg transform hover:-translate-y-1">
+        <div class="text-center mt-12 sm:mt-16">
+            <a href="busqueda.html" class="inline-block bg-purple-700 text-white font-bold py-4 px-10 rounded-full hover:bg-purple-800 transition shadow-lg transform hover:-translate-y-1 w-full sm:w-auto">
                 Encontrar Proveedores Ahora
             </a>
         </div>
@@ -127,27 +128,28 @@
     <section id="section-proveedor" class="hidden py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
-            <div>
-                <h2 class="text-3xl font-bold text-gray-900 mb-6">Profesionaliza tu negocio y consigue más clientes</h2>
-                <p class="text-lg text-gray-600 mb-6">
+            <div class="text-center md:text-left">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Profesionaliza tu negocio y consigue más clientes</h2>
+                <p class="text-base sm:text-lg text-gray-600 mb-6">
                     Olvídate de perseguir cobros o lidiar con clientes informales. Nosotros validamos al cliente y aseguramos el pago antes del evento.
                 </p>
-                <ul class="space-y-4">
+                <ul class="space-y-4 text-left">
                     <li class="flex items-start">
                         <i class="fa-solid fa-check text-green-500 mt-1 mr-3"></i>
-                        <span class="text-gray-700"><strong>Visibilidad Premium:</strong> Muestra tu portafolio a miles de paceños.</span>
+                        <span class="text-gray-700 text-sm sm:text-base"><strong>Visibilidad Premium:</strong> Muestra tu portafolio a miles de paceños.</span>
                     </li>
                     <li class="flex items-start">
                         <i class="fa-solid fa-check text-green-500 mt-1 mr-3"></i>
-                        <span class="text-gray-700"><strong>Cero Impagos:</strong> El cliente paga por adelantado a la plataforma (Custodia).</span>
+                        <span class="text-gray-700 text-sm sm:text-base"><strong>Cero Impagos:</strong> El cliente paga por adelantado a la plataforma (Custodia).</span>
                     </li>
                     <li class="flex items-start">
                         <i class="fa-solid fa-check text-green-500 mt-1 mr-3"></i>
-                        <span class="text-gray-700"><strong>Gestión Digital:</strong> Calendario, cotizaciones y contratos en un solo lugar.</span>
+                        <span class="text-gray-700 text-sm sm:text-base"><strong>Gestión Digital:</strong> Calendario, cotizaciones y contratos en un solo lugar.</span>
                     </li>
                 </ul>
             </div>
-            <div class="bg-gray-100 p-8 rounded-2xl border border-gray-200">
+            
+            <div class="bg-gray-100 p-6 sm:p-8 rounded-2xl border border-gray-200">
                 <h3 class="font-bold text-xl mb-6 text-center">Requisitos para unirte</h3>
                 <div class="grid grid-cols-2 gap-4">
                     <div class="bg-white p-4 rounded-lg text-center shadow-sm">
@@ -171,7 +173,7 @@
         </div>
 
         <div class="text-center">
-            <a href="login.html" class="inline-block bg-gray-900 text-white font-bold py-4 px-10 rounded-full hover:bg-gray-800 transition shadow-lg transform hover:-translate-y-1">
+            <a href="login.html" class="inline-block bg-gray-900 text-white font-bold py-4 px-10 rounded-full hover:bg-gray-800 transition shadow-lg transform hover:-translate-y-1 w-full sm:w-auto">
                 Registrar mi Empresa
             </a>
             <p class="mt-4 text-sm text-gray-500">Comisión del 10% solo por venta confirmada.</p>
@@ -180,36 +182,36 @@
 
     <section class="py-16 bg-white border-t border-gray-100">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-extrabold text-center text-gray-900 mb-12">Preguntas Frecuentes</h2>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-center text-gray-900 mb-12">Preguntas Frecuentes</h2>
             
             <div class="space-y-6">
                 <div class="border border-gray-200 rounded-lg p-6 hover:border-purple-300 transition">
-                    <h3 class="font-bold text-lg text-gray-900 flex items-center">
-                        <i class="fa-regular fa-circle-question mr-3 text-purple-600"></i>
+                    <h3 class="font-bold text-lg text-gray-900 flex items-start sm:items-center">
+                        <i class="fa-regular fa-circle-question mr-3 text-purple-600 mt-1 sm:mt-0"></i>
                         ¿Qué pasa si el proveedor cancela mi evento?
                     </h3>
                     <p class="mt-2 text-gray-600 ml-8 text-sm">
-                        Gracias al sistema de custodia, tu dinero está seguro. Si el proveedor cancela, recibes un <strong>reembolso total inmediato</strong> y el proveedor es penalizado en su reputación.
+                        Gracias al sistema de custodia, tu dinero está seguro. Si el proveedor cancela, recibes un <strong>reembolso total inmediato</strong> y el proveedor es penalizado.
                     </p>
                 </div>
 
                 <div class="border border-gray-200 rounded-lg p-6 hover:border-purple-300 transition">
-                    <h3 class="font-bold text-lg text-gray-900 flex items-center">
-                        <i class="fa-regular fa-circle-question mr-3 text-purple-600"></i>
+                    <h3 class="font-bold text-lg text-gray-900 flex items-start sm:items-center">
+                        <i class="fa-regular fa-circle-question mr-3 text-purple-600 mt-1 sm:mt-0"></i>
                         ¿Cómo sé que las reseñas son reales?
                     </h3>
                     <p class="mt-2 text-gray-600 ml-8 text-sm">
-                        Solo permitimos dejar reseñas a usuarios que han completado y pagado una reserva a través de la plataforma (Compra Verificada). No se pueden manipular.
+                        Solo permitimos dejar reseñas a usuarios que han completado y pagado una reserva a través de la plataforma (Compra Verificada).
                     </p>
                 </div>
 
                 <div class="border border-gray-200 rounded-lg p-6 hover:border-purple-300 transition">
-                    <h3 class="font-bold text-lg text-gray-900 flex items-center">
-                        <i class="fa-regular fa-circle-question mr-3 text-purple-600"></i>
+                    <h3 class="font-bold text-lg text-gray-900 flex items-start sm:items-center">
+                        <i class="fa-regular fa-circle-question mr-3 text-purple-600 mt-1 sm:mt-0"></i>
                         ¿Emiten factura?
                     </h3>
                     <p class="mt-2 text-gray-600 ml-8 text-sm">
-                        Sí. La plataforma te factura por la comisión del servicio, y el proveedor está obligado contractualmente a emitirte la factura por el servicio contratado (Catering, Música, etc).
+                        Sí. La plataforma te factura por la comisión del servicio, y el proveedor está obligado contractualmente a emitirte la factura por el servicio contratado.
                     </p>
                 </div>
             </div>
@@ -223,6 +225,15 @@
     </footer>
 
     <script>
+        // 1. Script para el Menú Hamburguesa
+        const menuBtn = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // 2. Script para el Toggle Cliente/Proveedor
         function showSection(type) {
             const clientSection = document.getElementById('section-cliente');
             const providerSection = document.getElementById('section-proveedor');
@@ -234,10 +245,8 @@
                 clientSection.classList.remove('hidden');
                 providerSection.classList.add('hidden');
                 
-                // Mover slider
                 slider.style.transform = 'translateX(0%)';
                 
-                // Estilos texto
                 btnCliente.classList.remove('text-gray-500');
                 btnCliente.classList.add('text-purple-800');
                 btnProveedor.classList.remove('text-purple-800');
@@ -246,10 +255,8 @@
                 clientSection.classList.add('hidden');
                 providerSection.classList.remove('hidden');
                 
-                // Mover slider
                 slider.style.transform = 'translateX(100%)';
 
-                // Estilos texto
                 btnProveedor.classList.remove('text-gray-500');
                 btnProveedor.classList.add('text-purple-800');
                 btnCliente.classList.remove('text-purple-800');

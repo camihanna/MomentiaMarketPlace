@@ -3,37 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Iniciar Sesión | Momentia</title>
+    <title>Iniciar Sesión | Momentia</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
+        body { font-family: 'Montserrat', sans-serif !important; }
         .brand-purple { color: #6B21A8; }
         .bg-brand-purple { background-color: #6B21A8; }
         .tab-active { border-bottom: 2px solid #6B21A8; color: #6B21A8; font-weight: bold; }
         .tab-inactive { border-bottom: 2px solid transparent; color: #6B7280; }
         .tab-inactive:hover { color: #374151; border-bottom: 2px solid #E5E7EB; }
+        
+        /* Animación suave para cambio de tabs */
+        .animate-fade-in {
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
     </style>
 </head>
 <body class="bg-gray-50 font-sans">
 
     <nav class="bg-white shadow-sm fixed w-full z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
+            <div class="flex justify-between h-16 items-center">
                 <div class="flex items-center">
                     <a href="index.html" class="flex items-center text-3xl fuente-momentia">
-                        <img src="Momentia (3).png" alt="Logo Momentia" class="h-40 w-auto mr-2"> 
+                        <img src="Momentia (3).png" alt="Logo Momentia" class="h-24 w-auto mr-2"> 
                     </a>
                 </div>
-                <div class="flex items-center">
-                    <a href="index.html" class="text-sm text-gray-500 hover:text-purple-700 font-medium">
-                        <i class="fa-solid fa-arrow-left mr-1"></i> Volver al inicio
-                    </a>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="busqueda.html" class="text-gray-600 hover:text-purple-700 font-medium">Explorar Servicios</a>
+                    <a href="nosotros.html" class="text-gray-600 hover:text-purple-700 font-medium">Sobre Nosotros</a>
+                    <a href="blog.html" class="text-gray-600 hover:text-purple-700 font-medium">Blog</a>
+                    <span class="px-4 py-2 rounded-md bg-gray-100 text-gray-400 font-medium cursor-default">
+                        Iniciar Sesión
+                    </span>
                 </div>
+
+                <div class="flex items-center md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-purple-700 focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 shadow-lg absolute w-full left-0">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col">
+                <a href="busqueda.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-purple-700 hover:bg-gray-50">Explorar Servicios</a>
+                <a href="nosotros.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-purple-700 hover:bg-gray-50">Sobre Nosotros</a>
+                <a href="blog.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-purple-700 hover:bg-gray-50">Blog</a>
+                <span class="block w-full text-center mt-4 px-5 py-3 rounded-md font-medium text-gray-400 bg-gray-100">
+                    Estás en Iniciar Sesión
+                </span>
             </div>
         </div>
     </nav>
 
-    <div class="min-h-screen flex">
+    <div class="min-h-screen flex pt-16">
         
         <div class="hidden lg:block lg:w-1/2 relative">
             <img class="absolute inset-0 h-full w-full object-cover" src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Evento elegante">
@@ -47,21 +79,21 @@
             </div>
         </div>
 
-        <div class="w-full lg:w-1/2 flex items-center justify-center px-8 py-24 bg-white">
+        <div class="w-full lg:w-1/2 flex items-center justify-center px-4 sm:px-8 py-12 bg-white">
             <div class="max-w-md w-full space-y-8">
                 
                 <div class="flex justify-center mb-8 border-b border-gray-200">
-                    <button id="tab-cliente" onclick="switchTab('cliente')" class="w-1/2 py-4 text-center text-lg transition-colors tab-active">
+                    <button id="tab-cliente" onclick="switchTab('cliente')" class="w-1/2 py-4 text-center text-lg transition-colors tab-active focus:outline-none">
                         Soy Cliente
                     </button>
-                    <button id="tab-proveedor" onclick="switchTab('proveedor')" class="w-1/2 py-4 text-center text-lg transition-colors tab-inactive">
+                    <button id="tab-proveedor" onclick="switchTab('proveedor')" class="w-1/2 py-4 text-center text-lg transition-colors tab-inactive focus:outline-none">
                         Soy Proveedor
                     </button>
                 </div>
 
                 <div id="form-cliente" class="animate-fade-in">
                     <div class="text-center mb-6">
-                        <h2 class="text-3xl font-bold text-gray-900">Bienvenido de nuevo</h2>
+                        <h2 class="text-2xl sm:text-3xl font-bold text-gray-900">Bienvenido de nuevo</h2>
                         <p class="mt-2 text-sm text-gray-600">
                             Accede para ver tus reservas y contratos digitales.
                         </p>
@@ -89,12 +121,12 @@
                         </div>
 
                         <div>
-                            <button type="button" onclick="alert('Simulación: Accediendo como Cliente...')" class="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-purple-700 hover:bg-purple-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 shadow-md transition">
+                            <a href="cliente-dashboard.html" class="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-purple-700 hover:bg-purple-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 shadow-md transition text-center decoration-none">
                                 <span class="absolute left-0 inset-y-0 flex items-center pl-3">
                                     <i class="fa-solid fa-lock text-purple-500 group-hover:text-purple-400"></i>
                                 </span>
                                 Ingresar como Cliente
-                            </button>
+                            </a>
                         </div>
                     </form>
                     <div class="mt-6 text-center">
@@ -107,7 +139,7 @@
 
                 <div id="form-proveedor" class="hidden animate-fade-in">
                     <div class="text-center mb-6">
-                        <h2 class="text-3xl font-bold text-gray-900">Panel de Negocios</h2>
+                        <h2 class="text-2xl sm:text-3xl font-bold text-gray-900">Panel de Negocios</h2>
                         <p class="mt-2 text-sm text-gray-600">
                             Gestiona tus reservas, calendario y pagos en custodia.
                         </p>
@@ -139,12 +171,12 @@
                         </div>
 
                         <div>
-                            <button type="button" onclick="alert('Simulación: Accediendo al Panel de Proveedor...')" class="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 shadow-md transition">
+                            <a href="proveedor-dashboard.html" class="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 shadow-md transition text-center decoration-none">
                                 <span class="absolute left-0 inset-y-0 flex items-center pl-3">
                                     <i class="fa-solid fa-briefcase text-gray-500 group-hover:text-gray-400"></i>
                                 </span>
                                 Acceder a mi Negocio
-                            </button>
+                            </a>
                         </div>
                     </form>
                     <div class="mt-6 text-center">
@@ -160,6 +192,15 @@
     </div>
 
     <script>
+        // 1. Menú Hamburguesa
+        const menuBtn = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // 2. Switch de Pestañas (Cliente/Proveedor)
         function switchTab(type) {
             const formCliente = document.getElementById('form-cliente');
             const formProveedor = document.getElementById('form-proveedor');
